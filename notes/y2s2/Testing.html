@@ -1,0 +1,94 @@
+<html><head><title>Testing</title><link rel="stylesheet" href="main.css"><link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Lustria" rel="stylesheet"></head> <body><div class="body-container"><h1>Testing</h1>
+<h2>Levels of Testing</h2>
+<ul>
+<li><strong>Unit/Module testing</strong>: Testing individual methods and classes in isolation, typically by the programmer.</li>
+<li><strong>Integration testing</strong>: Integrating and testing related modules together</li>
+<li><strong>System testing</strong>: Testing the whole system against its specification</li>
+<li><strong>Acceptance testing</strong>: Testing by the customer to ensure they are satisfied</li>
+</ul>
+<h2>Test Plans</h2>
+<p>Test plans typically contain the strategy and principles behind the testing, and detailed test specifications, including the expected output/result. For large projects this consumes a lot of resources but is arguably one of the most important phases of a project, notwithstanding design.</p>
+<p>A test strategy/specification will usually contain:</p>
+<ul>
+<li>What tests will be completed and how/when</li>
+<li>A time schedule</li>
+<li>Environments to be tested</li>
+<li>Where the tests and test results will be stored</li>
+<li>What tools will be used and how the tests will be conducted</li>
+</ul>
+<h2>Types of Tests</h2>
+<h3>Black box testing</h3>
+<p>Black box testing is based on the specification or interface. If you are given a requirement (or prototype, more commonly) what tests need to be satisfied to say it meets the spec/works correctly?</p>
+<ul>
+<li>We test the inputs and outputs</li>
+<li>We don't care if every line of code is hit or not</li>
+<li>Don't need to know the implementation details<ul>
+<li>Plan tests earlier</li>
+<li>Write tests earlier</li>
+<li>Other people can run the tests</li>
+<li>Tests are still valid if the code changes</li>
+</ul>
+</li>
+</ul>
+<h3>Equivalence partitioning and boundary values</h3>
+<p>Input and outputs often fall into classes where all members of that class are related. Each of these classes is an equivalence partition or domain, where the program behaves the same for each class member. Test cases should be chosen from each partition.</p>
+<p>Boundary value analysis focuses on the boundary of the input space to identify test cases. This is used to identify 'off-by-one' errors or fencepost errors, and loop conditions and counters (ie &lt; vs ≤).</p>
+<p>For example, if a given input is in the range 1..10, we don't need to test every value. We could test {-10, 0, 0.5, 1, 6, 10, 11}. It could even be argued that some of these values are in the same equivalence partitions, so not all of the examples may be necessary.</p>
+<h3>Building black box tests</h3>
+<ul>
+<li>Identify the equivalence classes</li>
+<li>Design a new test case, try to make it cover a valid (or invalid!) equivalence class which has not yet been tested, repeat this step until all valid equivalence classes are included</li>
+<li>Make sure all boundary values are covered</li>
+</ul>
+<h3>White box testing</h3>
+<p>Inputs and outputs are selected to execute every line of code in the subject. This is very time consuming, so is only really done on mission critical components. It gives high confidence but at a cost:</p>
+<ul>
+<li>Slow</li>
+<li>Needs the code to be written</li>
+<li>Changes to the code likely invalidate the tests</li>
+</ul>
+<h2>Tools</h2>
+<ul>
+<li><strong>Static analysis</strong><ul>
+<li>Checks done by the compiler (or linter) that detect potential problems, like:<ul>
+<li>Variable declared but never used</li>
+<li>Variable refered/used but never defined</li>
+<li>Unreachable code</li>
+<li>Code duplication</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Dynamic analysis</strong><ul>
+<li>As the program runs, dynamic analysis keeps records of where code is executed and how long it takes. Useful for performance tuning and checking test coverage.</li>
+</ul>
+</li>
+<li><strong>Test data generators</strong><ul>
+<li>Test generators create random test data in specified values e.g. email addresses or post codes.</li>
+</ul>
+</li>
+<li><strong>Simulators</strong><ul>
+<li>Mostly used for real-time systems (where faults are often time-dependent), they simulate events that could occur in the system - sometimes over minutes, hours or days.</li>
+</ul>
+</li>
+<li><strong>File comparators</strong><ul>
+<li>Programs to detect differences between two files; Useful for checking large volumes of test output.</li>
+</ul>
+</li>
+<li><strong>Test automation</strong><ul>
+<li>Rather than testing code by hand, we can write tests that will pass or fail based on a set of assertions. JUnit is an example.</li>
+</ul>
+</li>
+<li><strong>Interface test tools</strong><ul>
+<li>Testing UIs is difficult and tedious. There are two possible things a tool can do here: Remember when to click and reproduce that click, or define what should happen when a feature is tested. Tools like Selenium offer this type of testing for browser interfaces.</li>
+</ul>
+</li>
+</ul>
+<h2>Test-Driven Development</h2>
+<p>TDD is where tests are defined and implemented <em>before</em> the system is built. This has many advantages:</p>
+<ul>
+<li>Understand what you are building better</li>
+<li>Can test whether you have achieved what you wanted to</li>
+<li>Can check code still does what it should as it changes</li>
+</ul>
+</div></body></html>
