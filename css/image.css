@@ -1,13 +1,48 @@
-#after-intro {
-	align-self: center;
-}
-
 body {
-	background-image: url("../images/dummy.png");
+	background-image: url("../img/bg-max.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
 	margin: 0;
 	overflow: hidden;
+}
+
+main {
+	padding-left: 12%;
+	padding-top: 5%;
+	width:70%;
+	max-width: 700px;
+}
+
+h2 {
+	font-family:  'Roboto', sans-serif;
+	color: white;
+	font-size: 25px;
+}
+
+h1 {
+	font-family:  'Roboto', sans-serif;
+	color: white;
+	font-size: 40px;
+	line-height: 0;
+}
+
+p {
+	font-family:  'Poppins', sans-serif;
+	color: white;
+	font-size: 20px;
+}
+
+a {
+	color: white;
+	font-family:  'Poppins', sans-serif;
+	line-height: 0;
+}
+
+h3 {
+	font-family:  'Roboto', sans-serif;
+	color: white;
+	font-size: 30px;
+	margin-bottom: 0px;
 }
