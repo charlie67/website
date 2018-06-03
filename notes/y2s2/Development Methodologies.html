@@ -1,0 +1,131 @@
+<html><head><title>Development Methodologies</title><link rel="stylesheet" href="main.css"><link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Lustria" rel="stylesheet"></head> <body><div class="body-container"><h1>Development Methodologies</h1>
+<h2>The Waterfall Model</h2>
+<p><em>The OG</em></p>
+<p><img src="http://jaffa.pw/f/2018/05/ME1d9wG.png" alt=""></p>
+<h3>Characteristics</h3>
+<ul>
+<li>Based on general engineering princples</li>
+<li>Each phase is defined by what is created at that stage</li>
+<li>Phases are natural milestones, a change in emphasis</li>
+</ul>
+<h3>Advantages</h3>
+<ul>
+<li>Simple to understand</li>
+<li>Development process is easier to plan, manage and follow</li>
+<li>Overall design is unlikely to change (thus above)</li>
+</ul>
+<h3>Disadvantages</h3>
+<ul>
+<li>Rigid process, inflexible</li>
+<li>Responding to change is harder, must go through previous stages</li>
+<li>User is less likely to get <em>exactly</em> the solution they want (see above)</li>
+</ul>
+<h2>Incremental development</h2>
+<p><em>Essentially a variation of the waterfall model</em></p>
+<p><img src="http://jaffa.pw/f/2018/05/ON1deSN.png" alt=""></p>
+<h3>Characteristics</h3>
+<ul>
+<li>Get working software early in the cycle</li>
+<li>Build on existing working software, adding new functionality with each increment</li>
+</ul>
+<h3>Advantages</h3>
+<ul>
+<li>Extra milestones</li>
+<li>Problems are usually found earlier in the process</li>
+</ul>
+<h3>Disadvantages</h3>
+<ul>
+<li>A strong design is necessary, and a good understand of dependencies between milestones</li>
+</ul>
+<h2>Evolutionary Prototyping</h2>
+<p><em>Basically hacking it together; Suitable as part of a larger methodology</em></p>
+<p><img src="http://jaffa.pw/f/2018/05/I91dc8k.png" alt=""></p>
+<h3>Characteristics</h3>
+<ul>
+<li>Each evolution adds functionality until the code meets all the requirements</li>
+<li>Kind of an excuse for not having a methodology, gets messy quickly</li>
+</ul>
+<h3>Advantages</h3>
+<ul>
+<li>Useful when the exact requirements are difficult to explain or quantify</li>
+<li>Very fast (and loose)</li>
+</ul>
+<h3>Disadvantages</h3>
+<ul>
+<li>Not stable, doesn't have a specified design.</li>
+<li>Heavy refactoring needed as part of a larger method</li>
+</ul>
+<h2>Boehm's Spiral</h2>
+<p><em>This is barely ever used, but it's still very influential; Sometimes described as a meta-model</em></p>
+<p><img src="http://jaffa.pw/f/2018/05/Rm1dfcA.jpg" alt=""></p>
+<h3>Characteristics</h3>
+<ul>
+<li><strong>Used when the requirements are <em>not</em> well defined</strong></li>
+<li>Primarily reduces risk, through working in 'loops', increasing effort per loop</li>
+<li>If the project fails/is unfeasible/encounters problems, this approach ensures the minimal time, money and effort is lost</li>
+<li>Four tasks per 'loop':<ul>
+<li>Set an objective for the loop</li>
+<li>Evaluate alternatives, identify risk</li>
+<li>Develop and validate</li>
+<li>Plan the next loop (if/how to continue)</li>
+</ul>
+</li>
+</ul>
+<h3>An Example</h3>
+<p>A company wants to make a self driving car. They use the spiral model:</p>
+<ul>
+<li>Can we make a car that drives itself?</li>
+<li>Can we make a car that drives on a closed straight of road?</li>
+<li>Can we make a car that drives on a motorway?</li>
+<li>Can we make a car that drives on twisty roads?</li>
+<li>Can we make a car that drives in the city?</li>
+</ul>
+<p>Each loop builds on the last, and effectively includes a whole waterfall (or other methodology) within it.</p>
+<h3>Advantages</h3>
+<ul>
+<li>Flexible</li>
+<li>Very low risk, cost effective</li>
+<li>Emphasis on client approval/project feasability</li>
+</ul>
+<h3>Disadvantages</h3>
+<ul>
+<li>Infinite spirals can be costly and vast</li>
+<li>Not ideal for low-risk or small projects</li>
+<li>Strong risk analysis is key</li>
+</ul>
+<h2>Agile Methodology</h2>
+<p><em>A reaction to the repeated failure of large plan-based projects, and the inertia and that comes with software development</em></p>
+<h3>Types of Agile</h3>
+<p>Lots of agile methodologies exist:</p>
+<ul>
+<li>XP</li>
+<li>SCRUM</li>
+<li>RAD</li>
+<li>DSDM</li>
+<li>Crystal</li>
+<li>Agile Unified Process</li>
+</ul>
+<h3>The Four Agile Values</h3>
+<ul>
+<li><strong>Individuals and interactions</strong> <em>over</em> processes and tools</li>
+<li><strong>Working software</strong> <em>over</em> comprehensive documentation</li>
+<li><strong>Customer collaboration</strong> <em>over</em> contract negotiation</li>
+<li><strong>Responding to change</strong> <em>over</em> following a plan</li>
+</ul>
+<p>There is value to be had in the right-hand items, but the left items are more important.</p>
+<h3>The 12 Agile Principles</h3>
+<ol>
+<li>Customer satisfaction by early and continuous delivery of useful software</li>
+<li>Welcome changing requirements, even late in development</li>
+<li>Working software is delivered frequently (weeks rather than months)</li>
+<li>Close, daily cooperation between business people and developers</li>
+<li>Projects are built around motivated individuals, who should be trusted</li>
+<li>Face-to-face conversation is the best form of communication (co-location)</li>
+<li>Working software is the principal measure of progress</li>
+<li>Sustainable development, able to maintain a constant pace</li>
+<li>Continuous attention to technical excellence and good design</li>
+<li>Simplicity - the art of maximizing the amount of work <em>not</em> done - is essential</li>
+<li>Self-organizing teams</li>
+<li>Regular adaptation to changing circumstance</li>
+</ol>
+</div></body></html>
