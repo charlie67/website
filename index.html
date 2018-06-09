@@ -6,6 +6,8 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="img/32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="img/16x16.png">
 
+		<script src="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.js"></script>
+
 		<link rel="stylesheet" type="text/css" href="css/image.css">
 		<link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -14,17 +16,15 @@
 	</head>
 
 
-	<body>
+	<body class="progressive__bg progressive--not-loaded" data-progressive="img/bg.jpg" style="background-image: url('img/slim-bg.jpg');">
 		<main>
 
-			<header>
+			<header class="animated slideInLeft">
 				<h1>Charlie Robinson</h1>
 				<h2>Computer Science Undergraduate</h2>
 			</header>
 
-			<text>
-				<p>I'm Charlie and a second year Computer Science student at Aberystwyth University</p>
-			</text>
+				<p class="animated slideInLeft">I'm Charlie and a second year Computer Science student at Aberystwyth University</p>
 
 			<div id='links' class="animated slideInLeft">
 				<h3>Email</h3>
@@ -34,5 +34,12 @@
 			</div>
 
 		</main>
+
+		<script>
+			progressively.init();
+			progressively.render();
+		</script>
+
+
 	</body>
 </html>
