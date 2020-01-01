@@ -6,6 +6,11 @@ body {
 	background-attachment: fixed;
 	margin: 0;
 	overflow: hidden;
+	height: 3915px;
+}
+
+#outer{
+	min-height:100%;
 }
 
 main {
