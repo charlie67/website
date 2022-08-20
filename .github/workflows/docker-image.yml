@@ -15,11 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Login to Docker
-      env:
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
     - name: Build Docker container
-      run: docker build . --file Dockerfile --tag website:${GITHUB_REF##*/}
+      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/website:${GITHUB_REF##*/}
     - name: Push Docker Container
-      run: docker push website:${GITHUB_REF##*/}
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/website:${GITHUB_REF##*/}
