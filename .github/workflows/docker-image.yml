@@ -22,4 +22,4 @@ jobs:
     - name: Build Docker container
       run: docker build . --file Dockerfile --tag website:$(date +%s)
     - name: Push Docker Container
-      run: docker push
+      run: docker push website:$(date +%s)
